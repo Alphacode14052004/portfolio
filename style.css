@@ -1,0 +1,132 @@
+@import url("https://fonts.google.com/specimen/Gemunu+Libre");
+:root {
+    --bg-color: rgb(255, 255, 255);
+    --impcolor2: black;
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 240;
+  }
+  
+  
+  body {
+    margin: 0;
+    font-family: "Gemunu Libre";
+    min-height: 100vh;
+    background: var(--bg-color);
+  }
+
+ .container{
+  box-shadow: 0 1px 200px rgba(0,0,0,0.25);
+  }
+   
+  .container .menu{
+    display: flex;
+    position: relative;
+  }
+ 
+  .container .menu li{
+    list-style: none;
+    flex: 0;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 25px;
+    /* user-select: none; */
+  }
+ 
+  .container .menu li a{
+    color: rgb(0,0,0);
+    font-family: cursive;
+    transition: color 0.3s ease;
+  }
+  .container .menu li:hover a{
+    color: var(--bg-color);
+    background-color: var(--impcolor2);
+    
+  }
+
+  .container .menu .line{
+    position: absolute;
+    height: 5px;
+    width: 20%;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+  }
+
+  .animation{
+    place-content: center;
+    height: max-content;
+    text-align: center;
+       
+  }
+   #title {
+    font-size: clamp(0.5em, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: "Gemenu Libere";
+    /* width: max-content; */
+  }
+
+  #title::before,
+  #title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--bg-color);
+  }
+  
+  #title::before {
+      animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards;
+  }
+  
+  #title::after {
+    width: 0.125em;
+    animation: typewriter var(--typewriterSpeed)
+        steps(var(--typewriterCharacters)) 1s forwards,
+       steps(var(--typewriterCharacters)) infinite;
+  }
+  
+  #subtitle {
+    color: hsl(0 0% 0% / 0.7);
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3px);
+    animation: fadeInUp 3s ease forwards;
+    }
+  #btn{
+      padding: 15px 32px;
+      border-radius: 12px;
+      cursor: pointer;
+      animation: fadeInUp 5s ease forwards;
+      border: transparent;
+      background-color: white
+      
+    }
+  #btn:hover{
+     background-color: var(--impcolor2);
+     color: var(--bg-color)
+  }  
+  @keyframes typewriter {
+    100% {
+      left: 85%;
+    }
+  }
+ 
+  @keyframes fadeInUp {
+    30% {  
+      opacity: -064;
+      transform: translateY(05px);
+    }
+    50%{
+      opacity: 0;
+      transform: translateY(05px);
+    }
+    100%{
+      opacity: 04;
+      transform: translateY(05px);
+    }
+  }
+  /*  */
