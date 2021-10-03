@@ -103,18 +103,26 @@
       animation: fadeInUp 5s ease forwards;
       border: transparent;
       background-color: white
-      
     }
-  #btn:hover{
+    .btn{
+      padding: 15px 32px;
+      border-radius: 12px;
+      cursor: pointer;
+      animation: fadeInUp 5s ease forwards;
+      border: transparent;
+      background-color: white
+    }
+  .btn:hover{
      background-color: var(--impcolor2);
      color: var(--bg-color)
   }  
+  
   @keyframes typewriter {
     100% {
-      left: 85%;
+      left: 99%;
     }
   }
- 
+  
   @keyframes fadeInUp {
     30% {  
       opacity: -064;
