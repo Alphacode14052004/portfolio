@@ -2,32 +2,34 @@
 :root {
     --bg-color: rgb(255, 255, 255);
     --impcolor2: black;
-    --typewriterSpeed: 6s;
-    --typewriterCharacters: 240;
+    --typewriterSpeed: 2s;
+    --typewriterCharacters: 320;
   }
   
   
-  body {
-    margin: 0;
-    font-family: "Gemunu Libre";
-    min-height: 100vh;
-    background: var(--bg-color);
+  body{
+    /* margin:0; */
+     padding: 0vw;
   }
-
+  nav{
+    background-color: grey;
+    opacity: 20;
+    padding: 2px;
+  }
+/*hi nav starts*/
  .container{
-  box-shadow: 0 1px 200px rgba(0,0,0,0.25);
+  width: 100%;
+  box-shadow: 0 1px 200px rgb(243, 243, 243) ;
+  background-color: rgba(255, 255, 255, 0.877);
+  z-index: 1000000;
   }
-   
-  .container .menu{
-    display: grid;
-  }
- 
+   /*have idea of changing above color if you change it white*/
   .container .menu li{
     list-style: none;
-    flex: 0;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
-    padding: 25px;
+    padding: 10px;
+    display: inline-block;
     /* user-select: none; */
   }
  
@@ -39,10 +41,25 @@
   .container .menu li:hover a{
     color: var(--bg-color);
     background-color: var(--impcolor2);
-    padding:1px 32px;
+    padding:10px 20px;
     border-radius: 12px;
   }
-
+  img{
+    width: 50px;
+    float: right;
+    padding: 5px;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+/* 
   .container .menu .line{
     position: absolute;
     height: 5px;
@@ -50,9 +67,9 @@
     left: 0;
     bottom: 0;
     transition: all 0.3s ease;
-  }
+  } */
 
-  .animation{
+   .animation{
     place-content: center;
     height: max-content;
     text-align: center;
@@ -73,7 +90,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: var(--bg-color);
+    background: white;
   }
   
   #title::before {
@@ -96,6 +113,7 @@
     transform: translateY(3px);
     animation: fadeInUp 3s ease forwards;
     }
+    
   #btn{
       padding: 15px 32px;
       border-radius: 12px;
@@ -110,13 +128,27 @@
       cursor: pointer;
       animation: fadeInUp 5s ease forwards;
       border: transparent;
-      background-color: white
+      background-color: white;
+    }
+    #href{
+      text-decoration: none;
     }
   .btn:hover{
      background-color: var(--impcolor2);
-     color: var(--bg-color)
+     color: white;
+     
   }  
-  
+  #activities{
+    text-align: center;
+    margin: 9%;
+  }
+  #activities h1{
+    cursor: pointer;
+  }
+  #activities p{
+    cursor: text;
+  }
+ 
   @keyframes typewriter {
     100% {
       left: 99%;
@@ -136,5 +168,22 @@
       opacity: 04;
       transform: translateY(05px);
     }
+  } 
+  @keyframes transition {
+    from{
+      opacity: 0;
+      transform: rotateX(-10deg);
+    }
+    to{
+      opacity: 1;
+      transform: rotateX(0deg); 
+    }
   }
-  /*  */
+@media only screen and (max-width: 525px) {
+    .container .menu li {
+      font-size: 15px;
+    }
+    img{
+      width: 10px;
+    }
+  }
