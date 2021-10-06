@@ -129,6 +129,16 @@
       border: transparent;
       background-color: white;
     }
+    #int1{
+       height: 100px;
+       width: 200px;
+       float: none;
+    }
+    #int1:hover{
+      height: 100%;
+      width:100%;
+      cursor: pointer;
+    }
     #href{
       text-decoration: none;
     }
