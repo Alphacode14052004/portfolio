@@ -120,7 +120,6 @@
       cursor: pointer;
       animation: fadeInUp 5s ease forwards;
       border: transparent;
-      background-color: white
     }
     .btn{
       padding: 15px 32px;
@@ -148,7 +147,15 @@
   #activities p{
     cursor: text;
   }
- 
+  .img-2{
+    float: none;
+  }
+  #resume{
+  text-align: center;
+  }
+  #contact{
+    text-align: center;
+  }
   @keyframes typewriter {
     100% {
       left: 99%;
