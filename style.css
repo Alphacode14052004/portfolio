@@ -1,4 +1,5 @@
 @import url("https://fonts.google.com/specimen/Gemunu+Libre");
+
 :root {
     --bg-color: rgb(255, 255, 255);
     --impcolor2: black;
@@ -6,7 +7,9 @@
     --typewriterCharacters: 320;
   }
   
-  
+  html{
+    scroll-behavior: smooth;
+  }  
   body{
     /* margin:0; */
      padding: 0vw;
